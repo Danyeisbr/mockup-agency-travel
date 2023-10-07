@@ -17,9 +17,9 @@
       <div class="row no-gutters">
         <section class="col-12 vh-10">
           <nav class="d-flex custom-banner vh-10">
-            <div
-              class="col-lg-6 col-md-6 col-sm-6 d-flex align-items-center company-info"
-            >
+            <!-- Contenido centrado a la izquierda -->
+            <div class="col d-flex align-items-center company-info">
+              <!-- Logo y detalles de la empresa -->
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                 alt="Travel agency logo"
@@ -33,9 +33,44 @@
                 </h5>
               </div>
             </div>
-            <div
-              class="col-lg-6 col-md-6 col-sm-6 d-flex justify-content-end align-items-center"
-            >
+
+            <!-- Contenido centrado en el medio -->
+            <div class="col d-flex justify-content-center align-items-center">
+              <!-- Opciones de navegación -->
+              <ul class="nav">
+                <li class="nav-item">
+                  <a
+                    class="btn btn-primary btn-rounded me-2"
+                    href="./index.html"
+                    >Book</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="btn btn-primary btn-rounded me-2 dropdown-toggle"
+                    id="hotelsDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Hotels</a
+                  >
+                  <!-- Menú desplegable de "Hotels" -->
+                  <ul class="dropdown-menu" aria-labelledby="hotelsDropdown">
+                    <!-- Submenú 1: "Create Hotel" -->
+                    <li><a class="dropdown-item" href="#">Create Hotel</a></li>
+                    <!-- Submenú 2: "View Hotels" -->
+                    <li><a class="dropdown-item" href="./pages/listHotels.html">View Hotels</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-primary btn-rounded" href="#">Rooms</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contenido centrado a la derecha -->
+            <div class="col d-flex justify-content-end align-items-center">
+              <!-- Botón de inicio de sesión -->
               <button
                 type="button"
                 class="btn btn-lg bg-transparent"
@@ -51,83 +86,84 @@
                   />
                 </div>
               </button>
+            </div>
 
-              <div
-                class="modal fade"
-                id="miModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title">Login</h5>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">
-                      <form class="p-4">
-                        <div class="form-group mb-3">
-                          <label htmlFor="exampleInputUser" class="py-2">
-                            User
-                          </label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="exampleInputUser"
-                            placeholder="Agent2023"
-                          />
-                        </div>
-                        <div class="form-group">
-                          <label htmlFor="exampleInputPassword" class="py-2">
-                            Password
-                          </label>
-                          <input
-                            type="password"
-                            id="exampleInputPassword"
-                            class="form-control mb-4"
-                            placeholder="••••••••••••"
-                          />
-                        </div>
-                        <div
-                          class="col d-flex justify-content-center form-group form-check mb-4"
+            <!-- Modal de Login-->
+            <div
+              class="modal fade"
+              id="miModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="p-4">
+                      <div class="form-group mb-3">
+                        <label htmlFor="exampleInputUser" class="py-2">
+                          User
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleInputUser"
+                          placeholder="Agent2023"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label htmlFor="exampleInputPassword" class="py-2">
+                          Password
+                        </label>
+                        <input
+                          type="password"
+                          id="exampleInputPassword"
+                          class="form-control mb-4"
+                          placeholder="••••••••••••"
+                        />
+                      </div>
+                      <div
+                        class="col d-flex justify-content-center form-group form-check mb-4"
+                      >
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label
+                          class="form-check-label mx-1"
+                          htmlFor="exampleCheck1"
                         >
-                          <input
-                            type="checkbox"
-                            class="form-check-input"
-                            id="exampleCheck1"
-                          />
-                          <label
-                            class="form-check-label mx-1"
-                            htmlFor="exampleCheck1"
+                          Remember me
+                        </label>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                          <button
+                            type="submit"
+                            class="btn btn-primary mb-3 w-100"
                           >
-                            Remember me
-                          </label>
+                            Login
+                          </button>
                         </div>
-                        <div class="row">
-                          <div class="col-12">
-                            <button
-                              type="submit"
-                              class="btn btn-primary mb-3 w-100"
-                            >
-                              Login
-                            </button>
-                          </div>
 
-                          <div class="col-6">
-                            <p class="text-muted">Forgot user?</p>
-                          </div>
-                          <div class="col-6 text-end">
-                            <p class="text-muted">Forgot password?</p>
-                          </div>
+                        <div class="col-6">
+                          <p class="text-muted">Forgot user?</p>
                         </div>
-                      </form>
-                    </div>
+                        <div class="col-6 text-end">
+                          <p class="text-muted">Forgot password?</p>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -135,59 +171,83 @@
           </nav>
         </section>
         <section class="col-12 vh-90 bg-image">
-          <div class="col-8 container shadow">
-            <div class="row">
-              <div class="col d-flex justify-content-end align-items-center">
-                <h1 class="text-white fw-bold">
-                  FIND A HOTEL <br />
-                  AND PLAN THE
-                </h1>
-              </div>
-              <div class="col d-flex justify-content-start align-items-center">
-                <h2 class="signature-text">perfect getaway</h2>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header bg-transparent">Find a Hotel</div>
-              <div class="card-body">
-                <form>
-                  <div class="row">
-                    <div class="col mb-3">
-                      <label class="form-label">Where to? (Required)</label>
-                      <select class="form-select">
-                        <option value="1" selected>Medellín</option>
-                        <option value="2">Bucaramanga</option>
-                        <option value="3">Cartagena</option>
-                        <option value="3">Santa Marta</option>
-                      </select>
-                    </div>
-                    <div class="col mb-3">
-                      <label class="form-label">Check-in</label>
-                      <input
-                        type="date"
-                        class="form-control"
-                        placeholder="Check-in"
-                        value="Check-in"
-                      />
-                    </div>
-                    <div class="col mb-3">
-                      <label class="form-label">Check-out</label>
-                      <input
-                        type="date"
-                        class="form-control"
-                        placeholder="Check-out"
-                        value="Check-out"
-                      />
-                    </div>
-                    <div
-                      class="col mb-3 d-flex justify-content-center align-items-end"
-                    >
-                      <a class="btn btn-primary w-75" href="./pages/listHotels.html">
-                        Search Hotel
-                      </a>
-                    </div>
+          <div
+            class="col-12 container h-100 d-flex justify-content-center align-items-start"
+          >
+            <div class="row mt-5">
+              <div class="col text-center mb-4">
+                <div class="row align-items-center">
+                  <div class="col text-end">
+                    <h1 class="text-white fw-bold">
+                      FIND A HOTEL <br />
+                      AND PLAN THE
+                    </h1>
                   </div>
-                </form>
+                  <div class="col text-start">
+                    <h2 class="signature-text">perfect getaway</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <form>
+                      <div class="row">
+                        <div class="col mb-3">
+                          <label class="form-label">Where to? (Required)</label>
+                          <select class="form-select">
+                            <option value="1" selected>Medellín</option>
+                            <option value="2">Bucaramanga</option>
+                            <option value="3">Cartagena</option>
+                            <option value="3">Santa Marta</option>
+                          </select>
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label">Check-in</label>
+                          <input
+                            type="date"
+                            class="form-control"
+                            placeholder="Check-in"
+                            value="Check-in"
+                            required
+                          />
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label">Check-out</label>
+                          <input
+                            type="date"
+                            class="form-control"
+                            placeholder="Check-out"
+                            value="Check-out"
+                            required
+                          />
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label">Guests</label>
+                          <select class="form-select">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                          </select>
+                        </div>
+                        <div
+                          class="col-2 mb-3 d-flex justify-content-center align-items-end"
+                        >
+                          <a
+                            type="button"
+                            class="btn btn-primary w-75"
+                            href="./pages/listHotels.html"
+                          >
+                            Search Hotel
+                          </a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

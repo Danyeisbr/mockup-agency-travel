@@ -17,7 +17,7 @@
 
 .bg-image {
   background: linear-gradient(rgba(248, 247, 248, 0.6), rgba(39, 137, 199, 1)),
-    url("./images/travel-agency.jpg");
+    url("../images/travel-agency.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
