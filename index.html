@@ -16,159 +16,153 @@
     <div class="container-fluid">
       <div class="row no-gutters">
         <section class="col-12 vh-10">
-          <nav class="d-flex custom-banner vh-10">
-            <!-- Contenido centrado a la izquierda -->
-            <div class="col d-flex align-items-center company-info">
-              <!-- Logo y detalles de la empresa -->
-              <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                alt="Travel agency logo"
-                class="company-logo"
-              />
-              <div class="col">
+          <nav
+            class="navbar fixed-top navbar-expand-lg navbar-light bg-white vh-10"
+          >
+            <div class="container-fluid bg-white">
+              <a class="navbar-brand" href="#home">
                 <h5>
-                  <span class="custom-span fw-normal">Hilton</span>
+                  <span class="custom-span">Hilton</span>
                   <br />
                   <strong>Alliance</strong>
                 </h5>
-              </div>
-            </div>
+              </a>
 
-            <!-- Contenido centrado en el medio -->
-            <div class="col d-flex justify-content-center align-items-center">
-              <!-- Opciones de navegación -->
-              <ul class="nav">
-                <li class="nav-item">
-                  <a
-                    class="btn btn-primary btn-rounded me-2"
-                    href="./index.html"
-                    >Book</a
-                  >
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="btn btn-primary btn-rounded me-2 dropdown-toggle"
-                    id="hotelsDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                    >Hotels</a
-                  >
-                  <!-- Menú desplegable de "Hotels" -->
-                  <ul class="dropdown-menu" aria-labelledby="hotelsDropdown">
-                    <!-- Submenú 1: "Create Hotel" -->
-                    <li><a class="dropdown-item" href="#">Create Hotel</a></li>
-                    <!-- Submenú 2: "View Hotels" -->
-                    <li><a class="dropdown-item" href="./pages/listHotels.html">View Hotels</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-primary btn-rounded" href="#">Rooms</a>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Contenido centrado a la derecha -->
-            <div class="col d-flex justify-content-end align-items-center">
-              <!-- Botón de inicio de sesión -->
               <button
+                class="navbar-toggler"
                 type="button"
-                class="btn btn-lg bg-transparent"
-                data-bs-toggle="modal"
-                data-bs-target="#miModal"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+                aria-controls=""
+                aria-expanded="false"
+                aria-label="Toggle navigation"
               >
-                <div class="d-flex align-items-center">
-                  <h5 class="fw-bold p-2">Sing In</h5>
-                  <img
-                    src="./images/avatar.png"
-                    alt="User Avatar"
-                    class="user-avatar"
-                  />
-                </div>
+                <span class="navbar-toggler-icon"></span>
               </button>
-            </div>
-
-            <!-- Modal de Login-->
-            <div
-              class="modal fade"
-              id="miModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Login</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <form class="p-4">
-                      <div class="form-group mb-3">
-                        <label htmlFor="exampleInputUser" class="py-2">
-                          User
-                        </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="exampleInputUser"
-                          placeholder="Agent2023"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label htmlFor="exampleInputPassword" class="py-2">
-                          Password
-                        </label>
-                        <input
-                          type="password"
-                          id="exampleInputPassword"
-                          class="form-control mb-4"
-                          placeholder="••••••••••••"
-                        />
-                      </div>
-                      <div
-                        class="col d-flex justify-content-center form-group form-check mb-4"
+              <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav mx-auto ">
+                  <li class="nav-item mx-1">
+                    <a class="nav-link fs-5 active" href="#home">
+                      Home
+                      <span class="visually-hidden">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown mx-1">
+                    <a
+                      class="nav-link dropdown-toggle fs-5"
+                      data-bs-toggle="dropdown"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      href="#"
+                    >
+                      Hotels
+                    </a>
+                    <div class="dropdown-menu bg-white border border-0">
+                      <a class="dropdown-item bg-body-tertiary fs-5" href="./pages/listHotels.html"
+                        >List Hotels</a
                       >
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="exampleCheck1"
-                        />
-                        <label
-                          class="form-check-label mx-1"
-                          htmlFor="exampleCheck1"
-                        >
-                          Remember me
-                        </label>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                          <button
-                            type="submit"
-                            class="btn btn-primary mb-3 w-100"
-                          >
-                            Login
-                          </button>
-                        </div>
-
-                        <div class="col-6">
-                          <p class="text-muted">Forgot user?</p>
-                        </div>
-                        <div class="col-6 text-end">
-                          <p class="text-muted">Forgot password?</p>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+                      <a class="dropdown-item bg-body-tertiary fs-5" href="#">Create Hotel</a>
+                    </div>
+                  </li>
+                  <li class="nav-item mx-1">
+                    <a class="nav-link fs-5" href="#skills"> Rooms </a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <button
+                    type="button"
+                    class="btn btn-primary col-12 mb-4 mb-lg-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#miModal"
+                  >
+                    Sing In
+                  </button>
+                </form>
               </div>
             </div>
           </nav>
+          <!-- Modal de Login debe estar despues del nav para que funcione bien-->
+          <div
+            class="modal fade"
+            id="miModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Login</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form class="p-4">
+                    <div class="form-group mb-3">
+                      <label htmlFor="exampleInputUser" class="py-2">
+                        User
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputUser"
+                        placeholder="Agent2023"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label htmlFor="exampleInputPassword" class="py-2">
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        id="exampleInputPassword"
+                        class="form-control mb-4"
+                        placeholder="••••••••••••"
+                      />
+                    </div>
+                    <div
+                      class="col d-flex justify-content-center form-group form-check mb-4"
+                    >
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label
+                        class="form-check-label mx-1"
+                        htmlFor="exampleCheck1"
+                      >
+                        Remember me
+                      </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <a
+                          type="submit"
+                          class="btn btn-primary mb-3 w-100"
+                          href="./pages/listHotels.html"
+                        >
+                          Login
+                        </a>
+                      </div>
+
+                      <div class="col-6">
+                        <p class="text-muted">Forgot user?</p>
+                      </div>
+                      <div class="col-6 text-end">
+                        <p class="text-muted">Forgot password?</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="col-12 vh-90 bg-image">
           <div
@@ -193,7 +187,7 @@
                   <div class="card-body">
                     <form>
                       <div class="row">
-                        <div class="col mb-3">
+                        <div class="col-lg-3 col-md-6  mb-3">
                           <label class="form-label">Where to? (Required)</label>
                           <select class="form-select">
                             <option value="1" selected>Medellín</option>
@@ -202,7 +196,7 @@
                             <option value="3">Santa Marta</option>
                           </select>
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-lg-3 col-md-6  mb-3">
                           <label class="form-label">Check-in</label>
                           <input
                             type="date"
@@ -212,7 +206,7 @@
                             required
                           />
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-lg-3 col-md-6  mb-3">
                           <label class="form-label">Check-out</label>
                           <input
                             type="date"
@@ -222,7 +216,7 @@
                             required
                           />
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-lg-1 col-md-6  mb-3">
                           <label class="form-label">Guests</label>
                           <select class="form-select">
                             <option value="1" selected>1</option>
@@ -234,7 +228,7 @@
                           </select>
                         </div>
                         <div
-                          class="col-2 mb-3 d-flex justify-content-center align-items-end"
+                          class="col-lg-2 col-md-12 col-sm-12 mb-3 d-flex justify-content-center align-items-end"
                         >
                           <a
                             type="button"

@@ -8,6 +8,15 @@
   font-family: "Inter, sans-serif";
 }
 
+.navbar-brand h5 {
+  color: black;
+} 
+
+.dropdown-item:hover {
+  background-color: #007bff; /* Cambiar el color a tu preferencia */
+  color: #fff; /* Cambiar el color del texto cuando haces hover */
+}
+
 .user-avatar {
   width: 40px;
   height: 40px;
@@ -16,7 +25,7 @@
 }
 
 .bg-image {
-  background: linear-gradient(rgba(248, 247, 248, 0.6), rgba(39, 137, 199, 1)),
+  background: linear-gradient(rgba(39, 137, 199, 0.8), rgba(248, 247, 248, 0.5)),
     url("../images/travel-agency.jpg");
   background-size: cover;
   background-repeat: no-repeat;
