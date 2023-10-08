@@ -17,7 +17,7 @@
       <div class="row no-gutters">
         <section class="col-12 vh-10">
           <nav
-            class="navbar fixed-top navbar-expand-lg navbar-light bg-white vh-10"
+            class="navbar fixed-top navbar-expand-lg navbar-light bg-white vh-10 border-bottom border-1"
           >
             <div class="container-fluid bg-white">
               <a class="navbar-brand" href="#home">
@@ -40,7 +40,7 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav mx-auto ">
+                <ul class="navbar-nav mx-auto">
                   <li class="nav-item mx-1">
                     <a class="nav-link fs-5 active" href="#home">
                       Home
@@ -59,10 +59,19 @@
                       Hotels
                     </a>
                     <div class="dropdown-menu bg-white border border-0">
-                      <a class="dropdown-item bg-body-tertiary fs-5" href="./pages/listHotels.html"
+                      <a
+                        class="dropdown-item bg-body-tertiary fs-5"
+                        href="./pages/listHotels.html"
                         >List Hotels</a
                       >
-                      <a class="dropdown-item bg-body-tertiary fs-5" href="#">Create Hotel</a>
+                      <a
+                        class="dropdown-item bg-body-tertiary fs-5"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalAddHoteles"
+                        class="btn btn-primary"
+                        >Create Hotel</a
+                      >
                     </div>
                   </li>
                   <li class="nav-item mx-1">
@@ -163,6 +172,113 @@
               </div>
             </div>
           </div>
+
+          <!-- Modal Crear Hoteles -->
+          <div
+            class="modal fade"
+            id="modalAddHoteles"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Hoteles</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form class="p-4">
+                    <div class="form-group mb-3">
+                      <label htmlFor="exampleInputUser" class="py-2">
+                        Nombre del hotel
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputUser"
+                        placeholder="Name Hotel"
+                      />
+                      <label htmlFor="exampleInputUser" class="py-2">
+                        Dirección
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputUser"
+                        placeholder="Address"
+                      />
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <label htmlFor="exampleInputPassword" class="py-2">
+                        Habitaciones disponibles
+                      </label>
+                      <select
+                        class="form-select"
+                        id="habitacionesSelect"
+                        name="habitacionesSelect"
+                      >
+                        <option value="1">1 habitación</option>
+                        <option value="2">2 habitaciones</option>
+                        <option value="3">3 habitaciones</option>
+                        <option value="4">4 habitaciones</option>
+                        <option value="5">5 habitaciones</option>
+                        <option value="6">6 habitaciones</option>
+                        <option value="7">7 habitaciones</option>
+                      </select>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label htmlFor="tipoHabitacionSelect" class="py-2"
+                        >Tipo de habitación</label
+                      >
+                      <select
+                        class="form-select"
+                        id="tipoHabitacionSelect"
+                        name="tipoHabitacionSelect"
+                      >
+                        <option value="individual">Individual</option>
+                        <option value="doble">Doble</option>
+                        <option value="matrimonial">Matrimonial</option>
+                        <option value="suite">Suite</option>
+                        <!-- Agrega más tipos de habitaciones según sea necesario -->
+                      </select>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label class="py-2">Precio e Impuesto</label>
+                      <div class="d-flex">
+                        <input
+                          type="number"
+                          class="form-control mr-2"
+                          placeholder="Precio"
+                        />
+                        <input
+                          type="number"
+                          class="form-control"
+                          placeholder="Impuesto"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <button
+                          type="submit"
+                          class="btn btn-primary mb-3 w-100"
+                        >
+                          Crear
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="col-12 vh-90 bg-image">
           <div
@@ -187,7 +303,7 @@
                   <div class="card-body">
                     <form>
                       <div class="row">
-                        <div class="col-lg-3 col-md-6  mb-3">
+                        <div class="col-lg-3 col-md-6 mb-3">
                           <label class="form-label">Where to? (Required)</label>
                           <select class="form-select">
                             <option value="1" selected>Medellín</option>
@@ -196,7 +312,7 @@
                             <option value="3">Santa Marta</option>
                           </select>
                         </div>
-                        <div class="col-lg-3 col-md-6  mb-3">
+                        <div class="col-lg-3 col-md-6 mb-3">
                           <label class="form-label">Check-in</label>
                           <input
                             type="date"
@@ -206,7 +322,7 @@
                             required
                           />
                         </div>
-                        <div class="col-lg-3 col-md-6  mb-3">
+                        <div class="col-lg-3 col-md-6 mb-3">
                           <label class="form-label">Check-out</label>
                           <input
                             type="date"
@@ -216,7 +332,7 @@
                             required
                           />
                         </div>
-                        <div class="col-lg-1 col-md-6  mb-3">
+                        <div class="col-lg-1 col-md-6 mb-3">
                           <label class="form-label">Guests</label>
                           <select class="form-select">
                             <option value="1" selected>1</option>

@@ -18,7 +18,7 @@
       <div class="row no-gutters">
         <section class="col-12 vh-10">
           <nav
-            class="navbar fixed-top navbar-expand-lg navbar-light bg-white vh-10"
+            class="navbar fixed-top navbar-expand-lg navbar-light bg-white vh-10 border-bottom border-1"
           >
             <div class="container-fluid bg-white">
               <a class="navbar-brand" href="#home">
@@ -41,16 +41,16 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav mx-auto ">
+                <ul class="navbar-nav mx-auto">
                   <li class="nav-item mx-1">
-                    <a class="nav-link fs-5 active" href="../index.html">
+                    <a class="nav-link fs-5" href="../index.html">
                       Home
                       <span class="visually-hidden">(current)</span>
                     </a>
                   </li>
                   <li class="nav-item dropdown mx-1">
                     <a
-                      class="nav-link dropdown-toggle fs-5"
+                      class="nav-link dropdown-toggle fs-5 active"
                       data-bs-toggle="dropdown"
                       role="button"
                       aria-haspopup="true"
@@ -63,7 +63,14 @@
                       <a class="dropdown-item bg-body-tertiary fs-5" href="#"
                         >List Hotels</a
                       >
-                      <a class="dropdown-item bg-body-tertiary fs-5" href="#">Create Hotel</a>
+                      <a
+                        class="dropdown-item bg-body-tertiary fs-5"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalAddHoteles"
+                        class="btn btn-primary"
+                        >Create Hotel</a
+                      >
                     </div>
                   </li>
                   <li class="nav-item mx-1">
@@ -157,6 +164,113 @@
                       </div>
                       <div class="col-6 text-end">
                         <p class="text-muted">Forgot password?</p>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Crear Hoteles -->
+          <div
+            class="modal fade"
+            id="modalAddHoteles"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Hoteles</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form class="p-4">
+                    <div class="form-group mb-3">
+                      <label htmlFor="exampleInputUser" class="py-2">
+                        Nombre del hotel
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputUser"
+                        placeholder="Name Hotel"
+                      />
+                      <label htmlFor="exampleInputUser" class="py-2">
+                        Dirección
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputUser"
+                        placeholder="Address"
+                      />
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <label htmlFor="exampleInputPassword" class="py-2">
+                        Habitaciones disponibles
+                      </label>
+                      <select
+                        class="form-select"
+                        id="habitacionesSelect"
+                        name="habitacionesSelect"
+                      >
+                        <option value="1">1 habitación</option>
+                        <option value="2">2 habitaciones</option>
+                        <option value="3">3 habitaciones</option>
+                        <option value="4">4 habitaciones</option>
+                        <option value="5">5 habitaciones</option>
+                        <option value="6">6 habitaciones</option>
+                        <option value="7">7 habitaciones</option>
+                      </select>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label htmlFor="tipoHabitacionSelect" class="py-2"
+                        >Tipo de habitación</label
+                      >
+                      <select
+                        class="form-select"
+                        id="tipoHabitacionSelect"
+                        name="tipoHabitacionSelect"
+                      >
+                        <option value="individual">Individual</option>
+                        <option value="doble">Doble</option>
+                        <option value="matrimonial">Matrimonial</option>
+                        <option value="suite">Suite</option>
+                        <!-- Agrega más tipos de habitaciones según sea necesario -->
+                      </select>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label class="py-2">Precio e Impuesto</label>
+                      <div class="d-flex">
+                        <input
+                          type="number"
+                          class="form-control mr-2"
+                          placeholder="Precio"
+                        />
+                        <input
+                          type="number"
+                          class="form-control"
+                          placeholder="Impuesto"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <button
+                          type="submit"
+                          class="btn btn-primary mb-3 w-100"
+                        >
+                          Crear
+                        </button>
                       </div>
                     </div>
                   </form>
